@@ -19,7 +19,7 @@ if(!session)
 const part1 = path.join(__dirname, `./days/${day}/part1.js`);
 const part2 = path.join(__dirname, `./days/${day}/part2.js`);
 
-const template = `const data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString().split('\\n');\n\nvar result = data\n\nconsole.log(result);`;
+const template = `let data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString()\n\nvar result = data\n\nconsole.log(result);`;
 
 const setup = fs.mkdir(path.join(__dirname, `./days/${day}`))
     .then(() => 
