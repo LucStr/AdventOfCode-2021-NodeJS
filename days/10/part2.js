@@ -1,16 +1,9 @@
-let data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString();
+const data = require('../../get_data')(10);
 
 const normal = {open: '(', close: ')', error: 3, valid: 1};
 const edget = {open: '[', close: ']', error: 57, valid: 2};
 const curvy = {open: '{', close: '}', error: 1197, valid: 3};
 const vector = {open: '<', close: '>', error: 25137, valid: 4};
-
-const config = [
-    normal,
-    edget,
-    curvy,
-    vector
-]
 
 const configMapping = {
     '(': {config: normal, isOpen: true},

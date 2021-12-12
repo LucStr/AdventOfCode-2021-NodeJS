@@ -1,4 +1,4 @@
-let data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString()
+const data = require('../../get_data')(11);
 
 const field = data
     .trim()
@@ -50,17 +50,6 @@ while(!field.every(e => e.level === 0)){
     }
 
     count++;
-
-    /*let out = '';
-    for(let tile of field){
-        if(tile.x == 0){
-            out += '\n';
-        }
-
-        out += tile.level;
-    }
-
-    console.log(`ROUND ${i}\n${out}`)*/
 }
 
 console.log(count);

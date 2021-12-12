@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(__dirname + '\\data.in').toString().split('\n');
+const data = require('../../get_data')(5).split('\n');
 
 const field = new Array(1000 * 1000).fill(0);
 

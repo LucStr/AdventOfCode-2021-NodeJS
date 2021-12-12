@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString();
+const data = require('../../get_data')(9);
 
 const field = data.trim().split('\n').map((row, y) => [...row.trim()].map((item, x) => {
     return {
@@ -19,19 +19,3 @@ for(let tile of field){
 
 const result = field.filter(e => e.neighbors.filter(f => f.height > e.height).length === e.neighbors.length).map(e => e.height + 1).reduce((a, b) => a + b);
 console.log(result);
-
-let out = ''
-    
-for(tile of field){
-    if(tile.x === 0){
-        out += '\n';
-    }
-
-    if(tile.neighbors.filter(f => f.height > tile.height).length === tile.neighbors.length){
-        out += `\x1b[42m${tile.height}\x1b[0m`
-    } else {
-        out += tile.height
-    }
-}
-
-console.log(out);

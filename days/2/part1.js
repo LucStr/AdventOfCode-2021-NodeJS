@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(__dirname + '\\data.in').toString().split('\n');
+const data = require('../../get_data')(2).split('\n');
 
 const instructions = data.map(e => {
     const split = e.split(' ');

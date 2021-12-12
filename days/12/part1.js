@@ -1,4 +1,4 @@
-let data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString();
+const data = require('../../get_data')(12);
 
 const caves = [...new Set(data.match(/(\w+)/g))].map(e => {
     return {

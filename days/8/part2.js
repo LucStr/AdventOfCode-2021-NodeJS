@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString().split('\n');
+const data = require('../../get_data')(8).split('\n');
 
 function sortLetters(letters){
     return [...letters].sort((a, b) => a.localeCompare(b)).join('');

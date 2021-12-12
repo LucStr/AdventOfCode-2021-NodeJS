@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString()
+const data = require('../../get_data')(7)
     .split(',')
     .map(Number)
     .sort((a, b) => a - b);

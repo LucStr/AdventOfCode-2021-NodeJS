@@ -1,4 +1,4 @@
-let data = require('fs').readFileSync(require('path').join(__dirname, 'data.in')).toString();
+const data = require('../../get_data')(9);
 
 const field = data.trim().split('\n').map((row, y) => [...row.trim()].map((item, x) => {
     return {

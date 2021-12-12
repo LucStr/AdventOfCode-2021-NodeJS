@@ -1,4 +1,4 @@
-const input = require('fs').readFileSync(__dirname + '\\data.in').toString();
+const input = require('../../get_data')(4);
 
 const split = input.split('\n\n');
 

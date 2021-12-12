@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "load": "node setup_day.js"
+    "load": "node setup_day.js",
+    "benchmark": "node benchmark.js"
   },
   "author": "",
   "license": "ISC",

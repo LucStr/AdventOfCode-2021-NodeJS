@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(__dirname + '\\data.in').toString().split('\n');
+const data = require('../../get_data')(3).split('\n');
 
 const values = data.map(e => e.split('').map(Number));
 

@@ -1,4 +1,4 @@
-const data = require('fs').readFileSync(__dirname + '\\data.in').toString();
+const data = require('../../get_data')(6);
 
 const fishes = data.split(',').map(Number).reduce((a, b) => {
      a[b]++;

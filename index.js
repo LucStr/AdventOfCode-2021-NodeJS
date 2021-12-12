@@ -9,4 +9,8 @@ if(process.argv.length > 3){
     part = process.argv[3];
 }
 
+console.time('solve');
+
 require(`./days/${day}/part${part}`);    
+
+console.timeEnd('solve');
